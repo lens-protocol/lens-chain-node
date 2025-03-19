@@ -1,4 +1,3 @@
-version: "3.2"
 services:
   postgres:
     image: "postgres:14"
@@ -32,7 +31,7 @@ services:
       - POSTGRES_PASSWORD=notsecurepassword
       - PGPORT=5430
   external-node:
-    image: "matterlabs/external-node:2.0-v26.2.1"
+    image: "matterlabs/external-node:v25.2.0-arm64"
     depends_on:
       postgres:
         condition: service_healthy
