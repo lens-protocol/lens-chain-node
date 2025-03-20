@@ -42,7 +42,7 @@ This repository contains a Docker Compose setup for running a PostgreSQL databas
 
 ### 2. External Node
 
-- **Image:** `matterlabs/external-node:2.0-v24.16.0`
+- **Image:** `matterlabs/external-node:2.0-v26.7.0`
 - **Depends on:** PostgreSQL service (ensures the service starts after PostgreSQL is healthy)
 - **Ports:**
   - `3060` (HTTP)
@@ -66,6 +66,13 @@ This repository contains a Docker Compose setup for running a PostgreSQL databas
   - `EN_MERKLE_TREE_PATH`: Path for the Merkle tree.
   - `EN_SNAPSHOTS_RECOVERY_ENABLED`: Enable or disable snapshots recovery.
   - `RUST_LOG`: Log level settings.
+  - `EN_DA_CLIENT`: DA client configuration.
+  - `EN_DA_AVAIL_CLIENT_TYPE`: "FullClient"
+  - `EN_DA_BRIDGE_API_URL`: Avail Bridge API URL
+  - `EN_DA_TIMEOUT_MS`: "20000"
+  - `EN_DA_API_NODE_URL`: Avail API Node URL
+  - `EN_DA_APP_ID`: Avail App ID
+  - `EN_DA_SECRETS_SEED_PHRASE`: A randomly generated seed phrase, it is just needed to initialize a client that will verify your blobs, no transactions will be send from that account, so it is ok if it is freshly created and has no balance.
 
 ## Volumes
 
