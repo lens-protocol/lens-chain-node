@@ -43,7 +43,6 @@ services:
       - "127.0.0.1:3081:3081"
     volumes:
       - testnet-rocksdb:/db
-      - ./configs:/configs
     expose:
       - 3322
     environment:
