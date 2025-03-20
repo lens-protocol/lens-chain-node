@@ -69,6 +69,7 @@ services:
       EN_DA_TIMEOUT_MS: "20000"
       EN_DA_API_NODE_URL: "wss://turing-rpc.avail.so/ws"
       EN_DA_APP_ID: "247"
+      #This is a randomly generated seed phrase, it is just needed to initialize a client that will verify your blobs, no transactions will be send from that account, so it is ok if it is freshly created and has no balance.
       EN_DA_SECRETS_SEED_PHRASE: "acquire side muscle outdoor genre screen pen achieve venue royal display march"
 
 volumes:
