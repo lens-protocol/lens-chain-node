@@ -32,7 +32,8 @@ services:
       - POSTGRES_PASSWORD=notsecurepassword
       - PGPORT=5430
   external-node:
-    image: "matterlabs/external-node:2.0-v26.2.1"
+    image: "matterlabs/external-node:2.0-v26.7.0"
+    command: ["--components=all,da_fetcher"]
     depends_on:
       postgres:
         condition: service_healthy
@@ -61,6 +62,14 @@ services:
       EN_MERKLE_TREE_PATH: "./db/ext-node/lightweight"
       EN_SNAPSHOTS_RECOVERY_ENABLED: "false"
       RUST_LOG: "warn,zksync=info,zksync_core::metadata_calculator=info,zksync_state=info,zksync_utils=info,zksync_web3_decl::client=error"
+      EN_DA_CLIENT: "Avail"
+      EN_DA_AVAIL_CLIENT_TYPE: "FullClient"
+      EN_DA_BRIDGE_API_URL: "https://turing-bridge-api.avail.so"
+      EN_DA_TIMEOUT_MS: "20000"
+      EN_DA_API_NODE_URL: "wss://turing-rpc.avail.so/ws"
+      EN_DA_APP_ID: "247"
+      #This is a randomly generated seed phrase, it is just needed to initialize a client that will verify your blobs, no transactions will be send from that account, so it is ok if it is freshly created and has no balance.
+      EN_DA_SECRETS_SEED_PHRASE: "acquire side muscle outdoor genre screen pen achieve venue royal display march"
 
 volumes:
   mainnet-postgres: {}
