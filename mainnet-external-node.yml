@@ -46,7 +46,7 @@ services:
     expose:
       - 3322
     environment:
-      DATABASE_URL: "postgres://postgres:notsecurepassword@postgres:5430/zksync_local_ext_node"
+      DATABASE_URL: "postgres://postgres:notsecurepassword@postgres:5430/zksync"
       DATABASE_POOL_SIZE: 10
 
       EN_HTTP_PORT: 3060
