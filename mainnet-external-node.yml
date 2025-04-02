@@ -54,7 +54,7 @@ services:
       EN_HEALTHCHECK_PORT: 3081
       EN_PROMETHEUS_PORT: 3322
       EN_ETH_CLIENT_URL: https://ethereum-rpc.publicnode.com
-      EN_MAIN_NODE_URL: https://api.lens.matterhosted.dev/
+      EN_MAIN_NODE_URL: https://rpc.lens.xyz
       EN_L1_CHAIN_ID: 1
       EN_L2_CHAIN_ID: 232
       EN_L1_BATCH_COMMIT_DATA_GENERATOR_MODE: "Validium"
