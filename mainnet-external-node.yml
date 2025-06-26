@@ -32,8 +32,8 @@ services:
       - POSTGRES_PASSWORD=notsecurepassword
       - PGPORT=5430
   external-node:
-    image: "matterlabs/external-node:v28.2.1"
-    command: ["--components=all,da_fetcher"]
+    image: "matterlabs/external-node:v28.6.0"
+    command: ["--components=core,api,da_fetcher,tree_fetcher"]
     depends_on:
       postgres:
         condition: service_healthy
@@ -48,7 +48,6 @@ services:
     environment:
       DATABASE_URL: "postgres://postgres:notsecurepassword@postgres:5430/zksync"
       DATABASE_POOL_SIZE: 10
-
       EN_HTTP_PORT: 3060
       EN_WS_PORT: 3061
       EN_HEALTHCHECK_PORT: 3081
