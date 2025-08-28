@@ -32,7 +32,7 @@ services:
       - POSTGRES_PASSWORD=notsecurepassword
       - PGPORT=5430
   external-node:
-    image: "matterlabs/external-node:v28.6.0"
+    image: "matterlabs/external-node:v29.1.2"
     command: ["--components=core,api,da_fetcher,tree_fetcher"]
     depends_on:
       postgres:
