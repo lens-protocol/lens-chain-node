@@ -42,7 +42,7 @@ This repository contains a Docker Compose setup for running a PostgreSQL databas
 
 ### 2. External Node
 
-- **Image:** `matterlabs/external-node:2.0-v26.7.0`
+- **Image:** `matterlabs/external-node:v29.1.2`
 - **Depends on:** PostgreSQL service (ensures the service starts after PostgreSQL is healthy)
 - **Ports:**
   - `3060` (HTTP)
